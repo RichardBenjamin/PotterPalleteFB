@@ -168,7 +168,7 @@ personalInformation.addEventListener('click', ()=>{
 
 	const logoName = document.getElementById('logoName');
 logoName.addEventListener('click', ()=>{
-    window.location.href = '../HTMLS/index2.html'
+    window.location.href = '../HTMLS/index.html'
 })
 
 getuserCartItem()
@@ -239,7 +239,7 @@ function showProfile(){
 		localStorage.removeItem("id")
 		localStorage.removeItem("price")
 		localStorage.removeItem("token")
-		window.location.href = "../HTMLS/index2.html";
+		window.location.href = "../HTMLS/index.html";
 	}
 
 	function hideMenuBar(){

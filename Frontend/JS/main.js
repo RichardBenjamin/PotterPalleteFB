@@ -154,7 +154,7 @@ function Decorative_Pieces(){
 
 
 logoName.addEventListener('click', ()=>{
-    window.location.href = '../HTMLS/index2.html'
+    window.location.href = '../HTMLS/index.html'
 })
 
 

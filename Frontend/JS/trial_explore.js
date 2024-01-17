@@ -443,7 +443,7 @@ closeCart.addEventListener("click", () => {
                             
                                             const logoName = document.getElementById('logoName');
                                             logoName.addEventListener('click', ()=>{
-                                            	window.location.href = '../HTMLS/index2.html'
+                                            	window.location.href = '../HTMLS/index.html'
                                             })
                             
                             
