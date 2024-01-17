@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/trial_style.css">
+</head>
+<body>
+
+    <!-- header section  -->
+    <header class="header" style="height: 10vh; align-items: center;" >
+        <a href="#" class="logo">
+            <img id="logoImage" src="../IMAGES/pot.png" alt="">
+            <P id="logoName">Potter Palette</P>
+        </a>
+
+        <nav class="navbar" id="header">
+            <a id="navlink1" href="#home">HOME</a>
+            <a id="navlink2" href="#Most_popular">MOST POPULAR</a>
+            <a id="navlink3" href="#about_us">ABOUT US</a>
+            <a id="navlink4" href="#trending">TRENDING</a>
+            <a id="navlink5" href="#offers">OFFER</a>
+        </nav>
+
+    
+        <div class="icons" style="margin-right: 40px;">
+            <div class="buttons" style="margin-top: 6px;">
+                <button style="padding: 1vh 1.7vh; border-radius: 10px; border: none; font-size: 17px; background-color: #F2F8FC; cursor: pointer;" id="sign-up">Sign-up</button>
+                <button style="padding: 1vh 1.7vh; border-radius: 10px; border: none; font-size: 17px; background-color: #F2F8FC; cursor: pointer;" id="login">Login</button>
+            </div>
+            <div class="profileLetter" id="profileIcon" style="margin-top: 5px; display: none;" >
+                <H3 id="profileLetter">F</H3>
+            </div>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+        
+
+        <div class="search-form">
+            <select name="" id="Categories" classname="p-10 md:p-5 sm:p-3">
+                <option value="allCategories">All Categories</option>
+                <option value="allCategories">Category 1</option>
+                <option value="allCategories">Category 2</option>
+                <option value="allCategories">Category 3</option>
+                <option value="allCategories">Category 4</option>
+            </select>
+            <input type="search" id="search-box" placeholder="search here....">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+        
+        
+        
+        
+    </header>
+
+        <!-- home section -->
+
+        <div class="slider" id="home">
+            <div class="myslider fade" style="display: block;">
+                <div class="txt">
+                    <h3 style="line-height: 70px;">Creativity molded into beauty</h1>
+                    <p style="line-height: 50px;">Enrich your surroundings with the artistry of our pottery, meticulously
+                         crafted to bring beauty and utility together</p>
+                        <a href="../HTMLS/explore.html" class="btn">Explore</a>
+                </div>
+                <img src="../IMAGES/Pottery/BG5.jpg" style="width: 100%; height: 100%;" class="heroPicture" alt="">
+            </div>
+        </div>
+            <div class="myslider fade">
+                <div class="txt">
+                    <h3 style="line-height: 70px;">Bring your Creativity to life</h1>
+                    <p style="line-height: 50px;">Step into a world of crafted beauty and unique artistry with
+                        our pottery creations, each piece telling its own story</p>
+                        <a href="../HTMLS/explore.html" class="btn">Explore</a>
+                </div>
+                <img src="../IMAGES/Pottery/bg2.jpg" style="width: 100%; height: 100%;" class="heroPicture"  alt="">
+            </div>
+        </div>
+            <div class="myslider fade">
+                <div class="txt">
+                    <h3 style="line-height: 70px;">Crafted elegance in clay</h1>
+                    <p style="line-height: 50px;">Discover the soulful beauty of our pottery creations,
+                         each piece a testament to our dedication to timeless craftsmanship</p>
+                        <a href="../HTMLS/explore.html" class="btn">Explore</a>
+                </div>
+                <img src="../IMAGES/Pottery/bg3.jpg" style="width: 100%; height: 100%;" class="heroPicture"  alt="">
+            </div>
+        </div>
+            <div class="myslider fade">
+                <div class="txt">
+                    <h3 style="line-height: 70px;">Exploring beauty through creativity</h1>
+                    <p style="line-height: 50px;">Embrace the individuality of our pottery collection, 
+                        where every piece carries the mark of handcrafted excellence.</p>
+                        <a href="../HTMLS/explore.html" class="btn">Explore</a>
+                </div>
+                <img src="../IMAGES/Pottery/bg9.jpg" style="width: 100%; height: 100%;" class="heroPicture"  alt="">
+            </div>
+    
+            <div class="dotsbox" style="text-align: center;">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+        <div id="Most_popular"></div>
+        <div class="secondSection">
+            <div class="secondSectionText">
+                <h6>MOST POPULAR </h6>
+                <hr>
+                <hr>
+            </div>
+            <div class="wrapper">
+                <div class="card" onclick="Planters()">
+                    <img src="../IMAGES/Pottery/Pot/pexels-gül-işık-17962521.jpg"  >
+                    <div class="details">
+                        <a href="">Planters</a>
+                    </div>
+                </div>
+                <div class="card" onclick="Tableware()">
+                    <div class="poster"><img src="../IMAGES/Pottery/Bowls/pexels-darko-trajković-10595167.jpg" alt="3"></div>
+                    <div class="details">
+                        <a href="">Tableware</a>
+                    </div>
+                </div>
+                <div class="card" onclick="Cookware()">
+                    <div class="poster"><img src="../IMAGES/Pottery/Palette/meghna-r-2G6uqvB8j7k-unsplash.jpg" alt="1"></div>
+                    <div class="details">
+                        <a href="">Cookware</a>
+                    </div>
+                </div>
+                <div class="card" onclick="Decorative_Pieces()">
+                    <div class="poster"><img src="../IMAGES/Pottery/Vases/pexels-anna-tarazevich-5598268.jpg" alt="1"></div>
+                    <div class="details">
+                        <a href="">Decorative Pieces</a>
+                    </div>
+                </div>
+            </div>
+            <div class="div" id="trending"></div>
+        </div>
+        
+        <div class="thirdSection" >
+            <div class="thirdSectionText" >
+                <h6>TRENDING NOW</h6>
+                <hr>
+                <hr>
+            </div>
+            <div class="wrapper">
+                <div class="card">
+                    <div class="poster"><img src="../IMAGES/Pottery/Set1.webp" alt="2"></div>
+                    <div class="details">
+                        <h1>Sets</h1>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="poster"><img src="../IMAGES/Pottery/Mug1.webp" alt="3"></div>
+                    <div class="details">
+                        <h1>Mugs</h1>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="poster"><img src="../IMAGES/Pottery/Plates1.webp" alt="1"></div>
+                    <div class="details">
+                        <h1>Plates</h1>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="poster"><img src="../IMAGES/Pottery/bowl1.webp" alt="1"></div>
+                    <div class="details">
+                        <h1>Bowls</h1>
+                    </div>
+                </div>
+            </div>
+            <div id="about_us"></div>
+        </div>
+        <div class="about">
+            <div class="aboutText">
+                <h1>ABOUT US</h1>
+                <hr>
+                <hr>
+            </div>
+           
+
+            <div class="row">
+                <div class="image">
+                    <img src="../IMAGES/Pottery/bg8.jpg" alt="">
+                </div>
+
+                <div class="content">
+                       <p>At Potter's Palette, our journey began in 2023, 
+                        driven by a passion for creating functional and stunning handmade pottery.
+                        We believe in transforming ordinary moments into extraordinary experiences
+                        through purposeful craftsmanship.</p> 
+
+                       <p>Each piece curated here embodies more than artistry;
+                        they carry the essence of a purposeful existence. 
+                        It's an honor that our pottery becomes a part of your life,
+                        infusing it with authenticity and beauty. Your choice to 
+                        invest in handmade items sustains our dedication to crafting 
+                        and fuels our livelihood.</p> 
+
+                       <p id="thirdAbout">
+                        By choosing Potter's Palette, you engage in a deeper 
+                       narrative—one that allows us to dedicate ourselves entirely to 
+                       our craft and enables you to embrace a life steeped in 
+                       intentionality and aesthetics
+                       </p> 
+
+                        <a href="#" class="btn" id="about_usBtn">Sign-up</a>
+                </div>
+            </div>
+        </div>
+        <div class="fifthSection">
+            <h6>OUR PARTNERS</h6>
+            <hr>
+            <hr>
+            <div class="partners-logos">
+                <div class="partners-logos-slide">
+                    <img src="../IMAGES/logos/Diety.png" alt="">
+                    <img src="../IMAGES/logos/Techon.png" alt="">
+                    <img src="../IMAGES/logos/Valence.png" alt="">
+                    <img src="../IMAGES/logos/Bk-Agent.png" alt="">
+                    <img src="../IMAGES/logos/Savanna Showcase.png" alt="">
+                    <img src="../IMAGES/logos/TexTribe.png" alt="">
+                    <img src="../IMAGES/logos/TradeCrafts.png" alt="">
+                    <img src="../IMAGES/logos/Skill Work Community.png" alt="">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="fourthsection" id="footer">
+            <!-- <hr> -->
+            <div class="footer">
+                <div class="buttomLogo">
+                    <img src="../IMAGES/pot.png" alt="">
+                    <P>Potter Palette</P>
+                </div>
+                <div class="buttomMenus">
+                    <a href="#home">Home</a>
+                    <a href="#shop">Most popular</a>
+                    <a href="#about_us">About us</a>
+                    <a href="#trending">Trending</a>
+                    <a href="#offers">Offers</a>
+                    <a href="#offers">Contact</a>
+                </div>
+                <div class="buttomButton">
+                    <div class="parts">
+                        <div class="fas fa-user" id="search-btn1" style="font-size: 24px;"></div>
+                        <div class="fas fa-user" id="search-btn2" style="font-size: 24px;"></div>
+                        <div class="fas fa-user" id="search-btn3" style="font-size: 24px;"></div>
+                        <div class="fas fa-user" id="search-btn4" style="font-size: 24px;"></div>
+                        <div class="fas fa-user" id="search-btn5" style="font-size: 24px;"></div>
+                    </div>
+                    <button id="contact_us">Contact Us</button>
+                </div>
+            </div>
+        </div>
+<!-- <script>
+
+</script> -->
+
+
+    <script src="../JS/trial_script.js"></script>
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../CSS/dashboard2Potter.css">
+    <!-- <link href="../css2/bootstrap.min.css" rel="stylesheet">
+    <link href="../css2/style.css" rel="stylesheet"> -->
+    <title>Dashboard</title>
+</head>
+<body>
+    
+    <div class="top-bar" style="text-align: center;">
+        <p  style="text-align: center; margin-left: 45%;">Potter Dashboard</p>
+        <!-- <div class="leftSide">
+            <p id="emailAddress">email@gmail.com</p>
+        </div>
+        <div class="rightSide">
+            <p id="logout1">Logout</p>
+        </div> -->
+    </div>
+
+    <div class="cart">
+        <h2 class="cart-title">Your Cart</h2>
+
+        <!-- CONTENT  -->
+        <div class="cart-content" id="cart-content">
+        </div>
+
+        <!-- TOTAL   -->
+        <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">$ <span id="price">0</span></div>
+        </div>
+        <!-- BUY BUTTON  -->
+        <button type="button" class="btn-buy" id="Checkout">Check Out</button>
+        <!-- CART CLOSE  -->
+        <i class='bx bx-x' id="cart-close"></i>
+    </div>
+
+
+    <div class="container">
+        
+        <div class="top-container">
+            <p class="logo" id="logoName">Potter Pallete</p>
+            <div class="cartIcon" id="cart-icon"><img src="../IMAGES/Icons/cart-2-svgrepo-com.svg" class="dashboardIcon" alt="">Cart</div>
+        </div>
+        <h4>My Profile</h4>
+        <div class="main">
+            <div class="leftSidebar">
+                <div class="details">
+                    <div class="profileImage"><img src="../IMAGES/user-circle.svg" alt="profile Image"></div>
+                    <div class="profileDetails">
+                        <p class="name" id="full_name">Userame</p>
+                        <p class="email"  id="email">email@gmail.com</p>
+                        <p id="role">Role</p>
+                    </div>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li id="personalInformation"> <img src="../IMAGES/Icons/user-svgrepo-com.svg" class="dashboardIcon" alt="">Personal Information</li>
+                        <li id="uploadItem"><img src="../IMAGES/Icons/uploads-svgrepo-com.svg" class="dashboardIcon" alt="">Upload Work</li>
+                        <li id="MyPurchases"> <img src="../IMAGES/Icons/purchase-svgrepo-com.svg" class="dashboardIcon" alt="">My Purchases</li>
+                        <li id="Myuploads"><img src="../IMAGES/Icons/box-svgrepo-com.svg" class="dashboardIcon" alt="">My Uploads</li>
+                        <li id="MyOrders"><img src="../IMAGES/Icons/box-svgrepo-com.svg" class="dashboardIcon" alt="">My Orders</li>
+                        <li id="MySubscriptions"><img src="../IMAGES/Icons/payment-cards-money-svgrepo-com.svg" class="dashboardIcon" alt="">My Subscriptions</li>
+                        <li id="Logout"> <img src="../IMAGES/Icons/log-out-svgrepo-com.svg" class="dashboardIcon" alt="">Logout</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rightSideBar">
+                <div class="personalInformation">
+                    <h5>Personal Information</h5>
+                    <form id="form1">
+                        <div class="input-tab">
+                            <label for="Email">Email:</label>
+                            <input id="Email" type="text" placeholder="Enter your Email">
+                            <p id="emailErrorMessage"></p>
+                        </div>
+                        <div class="input-tab">
+                            <label for="Username">Username</label>
+                            <input id="Username" type="text" placeholder="Enter your Username">
+                            <p id="usernameErrorMessage"></p> 
+                        </div>
+                        <p class="changeAccountDetails">Change your account details below or <span class="clickHere">click here</span> to change your password</p>
+                        <div class="btn">
+                            <button id="UpdateProfileBtn" class="updateBtn" type="submit" >Update Account</button>                 
+                        </div>
+                    </form>
+                </div>
+                <div class="passwordSection">
+                    <h5>Change your password</h5>
+                    <form id="form2">
+                        <div class="input-tab">
+                            <label for="password1">Password</label>
+                            <input id="password1" type="password" placeholder="Enter your Password" autocomplete="on">
+                            <p id="passwordErrorMessage1"></p> 
+                        </div>
+                        <div class="input-tab">
+                            <label for="password2">New Password</label>
+                            <input id="password2" type="password" placeholder="Enter your Password" autocomplete="on">
+                            <p id="passwordErrorMessage2"></p>
+                        </div>
+                        <div class="input-tab">
+                            <label for="password3"> Confirm Password</label>
+                            <input id="password3" type="password" placeholder="Enter your Password" autocomplete="on">
+                            <p id="passwordErrorMessage3"></p>
+                        </div>
+                        <p class="changeAccountDetails">Change your password below or <span class="clickHereA">click here</span> to change your account details</p>
+                        <div class="btn">
+                            <button id="UpdatePasswordBtn" class="updateBtn" type="submit" >Update Password</button>                 
+                        </div>
+                    </form>
+                </div>
+                <div class="purchasedSection">
+                    <h5>My Purchases</h5>
+                    <div class="collection">
+                        <div class="frame">
+                            <div class="imageHolder">
+                                <img src="../IMAGES/Pottery/bg2.jpg" alt="">
+                            </div>
+                            <div class="tag">
+                                <div class="show">
+                                    <span>Name: <p>Vase</p></span>
+                                    <span>Category: <p>Set</p></span>
+                                    <span>Price: <p>$300</p></span>
+                                </div>
+                                <div class="hidden">
+                                    <span>Price: <p>$300</p></span>
+                                    <div class="frameButtons">
+                                        <button>Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frame">
+                            <div class="imageHolder">
+                                <img src="../IMAGES/Pottery/bg2.jpg" alt="">
+                            </div>
+                            <div class="tag">
+                                <div class="show">
+                                    <span>Name: <p>Vase</p></span>
+                                    <span>Category: <p>Set</p></span>
+                                    <span>Price: <p>$300</p></span>
+                                </div>
+                                <div class="hidden">
+                                    <span>Price: <p>$300</p></span>
+                                    <div class="frameButtons">
+                                        <button>Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="MyUploadsSection">
+                    <h5>My Uploads</h5>
+                    <div class="collection2">
+                        <div class="frame">
+                            <div class="imageHolder">
+                                <img src="../IMAGES/Pottery/bg2.jpg" alt="">
+                            </div>
+                            <div class="tag">
+                                <div class="show">
+                                    <span>Name: <p>Vase</p></span>
+                                    <span>Category: <p>Set</p></span>
+                                    <span>Price: <p>$300</p></span>
+                                </div>
+                                <div class="hidden">
+                                    <span>Price: <p>$300</p></span>
+                                    <div class="frameButtons">
+                                        <button>Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frame">
+                            <div class="imageHolder">
+                                <img src="../IMAGES/Pottery/bg2.jpg" alt="">
+                            </div>
+                            <div class="tag">
+                                <div class="show">
+                                    <span>Name: <p>Vase</p></span>
+                                    <span>Category: <p>Set</p></span>
+                                    <span>Price: <p>$300</p></span>
+                                </div>
+                                <div class="hidden">
+                                    <span>Price: <p>$300</p></span>
+                                    <div class="frameButtons">
+                                        <button>Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="uploadSection">
+                    <div class="uploadSectionLeftside">
+                        <form class="file-upload-form">
+                            <label for="image" class="file-upload-label">
+                              <div class="file-upload-design">
+                                <svg viewBox="0 0 640 512" height="1em">
+                                  <path
+                                    d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-217c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V392c0 13.3 10.7 24 24 24s24-10.7 24-24V257.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-9.4-9.4-24.6-9.4-33.9 0l-80 80z"
+                                  ></path>
+                                </svg>
+                                <p>Drag and Drop</p>
+                                <p>or</p>
+                                <span class="browse-button">Browse file</span>
+                              </div>
+                              <input type="file" id="image" />
+                            </label>
+                          </form> 
+
+
+                          <div class="itemName">
+                            <div class="input-tab">
+                                <label for="item">Name of Item</label>
+                                <input id="itemName" type="text" placeholder="Name of Item (Cups, Plates, etc)">
+                                <p id="textErrorMessage"></p>
+                            </div>
+                        </div>
+                        
+                        <div class="itemPrice">
+                            <div class="input-tab">
+                                <label for="item">Price</label>
+                                <input id="itemPrice" type="number" placeholder="Price in Naira">
+                                <p id="textErrorMessage"></p>
+                            </div>
+                        </div>
+                        <div class="Category">
+                            <p>Categories</p>
+                            <select name="" id="categoryValue">
+                                <option value="Tableware">Tableware</option>
+                                <option value="Cookware">Cookware</option>
+                                <option value="Decorative Pieces">Decorative Pieces</option>
+                                <option value="Planters">Planters</option>
+                                <option value="Tiles">Tiles</option>
+                            </select>
+                        </div>
+                        <div class="Date">
+                            <p>Date of Production</p>
+                            <input type="date" name="date" id="dateValue">
+                        </div>
+                    </div>
+                    <div class="rightSide3">
+                        <div class="description">
+                            <p>Item Description</p>
+                            <textarea name="description" id="itemDescription" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="suitableFor">
+                            <p>Suitable for</p>
+                            <div class="radio" id="suitableFor"> 
+                                <label><input type="checkbox" id="radioBtn1"  name="checkboxBtn" value="Home">Home</label>
+                                <label><input type="checkbox" id="radioBtn2"  name="checkboxBtn" value="Office">Office</label>
+                                <label><input type="checkbox" id="radioBtn3"  name="checkboxBtn" value="Hotel">Hotel</label>
+                                <label><input type="checkbox" id="radioBtn4"  name="checkboxBtn" value="Hospital">Hospital</label>
+                                <label><input type="checkbox" id="radioBtn5"  name="checkboxBtn" value="Other">Other</label>
+                            </div>
+                        </div>
+                        <button id="UploadBtn" class="sumbitUpdateBtn" type="submit" >Upload</button>    
+                    </div>
+                        
+                </div>
+                <div class="orderSection">
+                    <h5>Orders</h5>
+                    <div class="orderArea">
+                        <p>You have no orders an the moment</p>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="columns">
+            <div class="firstColumn">
+                <h5>Potter Pallete</h5>
+                <p>Ceramic paint palettes, whether shaped uniquely or hand-built,
+                     reflect the artist's touch and hold personal significance.</p>
+            </div>
+            <div class="secondColumn">
+                <h5>Contact Info</h5>
+                <p>No 8, Kenya Street Barnawa</p>
+                <p> potterpallete46@gmail.com</p>
+                <p>+234-8153232107</p>
+            </div>
+            <div class="thirdColumn">
+                <ul>
+                    <li><i class="fab fa-facebook-f"></i></li>
+                    <li><i class="fab fa-linkedin-in"></i></li>
+                    <li><i class="fab fa-twitter"></i></li>
+                    <li><i class="fab fa-instagram"></i></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../JS/trial_dashboardPotter.js"></script>
+</body>
+</html>

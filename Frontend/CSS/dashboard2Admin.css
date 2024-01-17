@@ -1,0 +1,320 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    scroll-padding: 2rem;
+}
+body{
+    background-color: white;
+    overflow: hidden;
+}
+
+.top-bar{
+    font-size: 14px;
+    display: flex;
+    background-color: #EBEBEB;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 7%;
+}
+
+.leftSide{
+    display: flex;
+    gap: 4%;
+}
+
+.logo{
+    font-size: 20px;
+}
+.container{
+    /* width: 80%; */
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    padding: 10px 17%;
+}
+
+.container h4{
+    margin-top: 5%;
+}
+
+.top-container{
+    padding: 10px 7%;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.main{
+    display: flex;
+    gap: 7%;
+    margin-top: 2%;
+}
+
+.details{
+    display: flex;
+    gap: 1.5%;
+}
+
+.profileDetails{
+    margin-top: -5px;
+    font-size: 13px;
+}
+
+.profileDetails .name{
+    font-weight: bold;
+}
+
+.menu ul li{
+    margin-top: 25%;
+    font-size: 14px;
+    cursor: pointer;
+    color: #474545;
+    transition: 1s;
+}
+
+.menu ul li:hover{
+    color: #000000;
+}
+
+.form{
+    margin-top: 6%;
+}
+
+
+
+/* .profileImage{
+border: 1px solid black;
+border-radius: 50%;
+height: 2.2rem;
+width: 22px;
+} */
+ .profileImage img{
+    background-image: contain;
+    object-fit: cover;
+    height: 2.2rem;
+ }
+
+.rightSideBar h5{
+    font-size: 15px;
+}
+
+.input-tab {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.input-tab input {
+    padding: 10px 20px;
+    border-radius: 3px;
+    border: none;
+    background-color: #EBEBEB;
+    outline: none;
+    font-size: 13px;
+    width: 150%;
+}
+
+.input-tab label {
+    font-size: 12px;
+    /* font-weight: bold; */
+    color:black; 
+    margin-bottom: 3px;
+}
+.input-tab p {
+    color: red;
+    font-style: italic;
+    margin-left: 1vh;
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+.clickHereA,
+.clickHere{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.changeAccountDetails{
+    font-size: 13px;
+}
+
+.updateBtn{
+    padding: 8px 20px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    margin-top: 19px;
+    cursor: pointer;
+}
+
+
+
+.textArea3{
+    margin-top: -9vh;
+    width: 103vh;
+    margin-left: 4rem;
+    padding: 2rem;
+    border-radius: 5px;
+    height: 550px;
+    /* overflow: auto; */
+    background-color: white;
+}
+
+
+table{
+    width: 100%;
+    table-layout: fixed;
+    min-width: 950px;
+    border-collapse: collapse;
+    overflow: hidden;
+    /* height: 650px; */
+}
+
+thead{
+    background-color: #EBEBEB;
+    border-radius: 45px;
+    position: sticky;
+   
+}
+
+thead th{
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+}
+tbody{
+    max-height: 350px;
+    display: block;
+    overflow: auto;
+}
+
+th, td{
+    padding: 12px 18px;
+    word-break: break-all;
+    text-align: center;
+    font-size: 17px;
+    margin: auto;
+}
+tr{
+    border-bottom: 2px solid #dddddd;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    width: 100%;
+}
+
+
+
+
+
+/* Added */
+
+.dashboardIcon{
+    height: 15px;
+    margin-bottom: -2px;
+    margin-right: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: #000000;
+    width: 100%;
+    color: white;
+    height: 21.5vh;
+}
+.columns{
+    width: 90%;
+    padding: 30px 10%;
+    display: flex;
+    gap: 30%;
+}
+.secondColumn,
+.firstColumn{
+    width: 25%;
+    line-height: 30px;
+}
+
+.firstColumn h5{
+    font-size: 21px;
+}
+
+
+
+/* .personalInformation{
+    display: none;
+} */
+
+.passwordSection{
+    display: none;
+}
+
+
+.createAdminSection{
+    display: none;
+}
+
+.manageUsers{
+    display: none;
+}
+
+.manageUsersSection{
+    display: none;
+}
+
+
+
+
+.dashboardIcon{
+    height: 15px;
+    margin-bottom: -2px;
+    margin-right: 2px;
+    cursor: pointer;
+}
+
+.profileDetails{
+    margin-top: 0px;
+    margin-left: 5px;
+    font-size: 13px;
+}
+
+
+.profileImage img{
+    background-image: contain;
+    object-fit: cover;
+    height: 2.2rem;
+    border-radius: 50%;
+    padding-bottom: 0px;
+ }
+
+ .profileImage{
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 3px;
+    padding-bottom: 0px;
+    }
+
+
+    .profileDetails{
+        margin-top: -6.5px;
+        font-size: 13px;
+    }
+    

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../CSS/dashboard2.css">
+    <!-- <link href="../css2/bootstrap.min.css" rel="stylesheet">
+    <link href="../css2/style.css" rel="stylesheet"> -->
+    <title>Dashboard</title>
+</head>
+<body>
+    
+    <!-- <div class="top-bar">
+        <div class="leftSide">
+            <p>Dashboard</p>
+            <p id="emailAddress">email@gmail.com</p>
+        </div>
+        <div class="rightSide">
+            <p id="logout1">Logout</p>
+        </div>
+    </div>   -->
+    <div class="cart">
+        <h2 class="cart-title">Your Cart</h2>
+
+        <!-- CONTENT  -->
+        <div class="cart-content" id="cart-content">
+            <div class="cart-box">
+                <img src="../IMAGES/Pottery/bowl4.webp" alt="" class="cart-img">
+                <div class="detail-box">
+                <div class="cart-product-title">Item Name</div>
+                <div class="cart-price">300</div>
+                <input type="number" value="1" class="cart-quantity">
+                </div>
+                <!-- REMOVE CART  -->
+                <i class='bx bxs-trash-alt cart-remove'></i>
+                </div>
+            <div class="cart-box">
+                <img src="../IMAGES/Pottery/bowl4.webp" alt="" class="cart-img">
+                <div class="detail-box">
+                <div class="cart-product-title">Item Name</div>
+                <div class="cart-price">300</div>
+                <input type="number" value="1" class="cart-quantity">
+                </div>
+                <!-- REMOVE CART  -->
+                <i class='bx bxs-trash-alt cart-remove'></i>
+                </div>
+            <div class="cart-box">
+                <img src="../IMAGES/Pottery/bowl4.webp" alt="" class="cart-img">
+                <div class="detail-box">
+                <div class="cart-product-title">Item Name</div>
+                <div class="cart-price">300</div>
+                <input type="number" value="1" class="cart-quantity">
+                </div>
+                <!-- REMOVE CART  -->
+                <i class='bx bxs-trash-alt cart-remove'></i>
+                </div>
+            <div class="cart-box">
+                <img src="../IMAGES/Pottery/bowl4.webp" alt="" class="cart-img">
+                <div class="detail-box">
+                <div class="cart-product-title">Item Name</div>
+                <div class="cart-price">300</div>
+                <input type="number" value="1" class="cart-quantity">
+                </div>
+                <!-- REMOVE CART  -->
+                <i class='bx bxs-trash-alt cart-remove'></i>
+                </div>
+            <div class="cart-box">
+                <img src="../IMAGES/Pottery/bowl4.webp" alt="" class="cart-img">
+                <div class="detail-box">
+                <div class="cart-product-title">Item Name</div>
+                <div class="cart-price">300</div>
+                <input type="number" value="1" class="cart-quantity">
+                </div>
+                <!-- REMOVE CART  -->
+                <i class='bx bxs-trash-alt cart-remove'></i>
+                </div>
+            <div class="cart-box">
+                <img src="../IMAGES/Pottery/bowl4.webp" alt="" class="cart-img">
+                <div class="detail-box">
+                <div class="cart-product-title">Item Name</div>
+                <div class="cart-price">300</div>
+                <input type="number" value="1" class="cart-quantity">
+                </div>
+                <!-- REMOVE CART  -->
+                <i class='bx bxs-trash-alt cart-remove'></i>
+                </div>
+        </div>
+
+        <!-- TOTAL   -->
+        <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">$ <span id="price">0</span></div>
+        </div>
+        <!-- BUY BUTTON  -->
+        <button type="button" class="btn-buy" id="Checkout">Check Out</button>
+        <!-- CART CLOSE  -->
+        <i class='bx bx-x' id="cart-close"></i>
+    </div>
+
+
+    <div class="container">
+        <div class="top-container">
+            <p class="logo" id="logoName">Potter Pallete</p>
+            <div class="cartIcon" id="cart-icon"><img src="../IMAGES/Icons/cart-2-svgrepo-com.svg" class="dashboardIcon" alt="">Cart</div>
+        </div>
+        <h4>My Profile</h4>
+        <div class="main">
+            <div class="leftSidebar">
+                <div class="details">
+                    <div class="profileImage"><img src="../IMAGES/customer-philip.png" alt="profile Image"></div>
+                    <div class="profileDetails">
+                        <p class="name" id="full_name">Userame</p>
+                        <p class="email"  id="email">email@gmail.com</p>
+                        <p id="role">Role</p>
+                    </div>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li id="personalInformation"> <img src="../IMAGES/Icons/user-svgrepo-com.svg" class="dashboardIcon" alt="">Personal Information</li>
+                        <li id="MyPurchases"> <img src="../IMAGES/Icons/purchase-svgrepo-com.svg" class="dashboardIcon" alt="">My Purchases</li>
+                        <li id="MyOrders"><img src="../IMAGES/Icons/box-svgrepo-com.svg" class="dashboardIcon" alt="">My Orders</li>
+                        <li id="Logout"> <img src="../IMAGES/Icons/log-out-svgrepo-com.svg" class="dashboardIcon" alt="">Logout</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rightSideBar">
+                <div class="personalInformation">
+                    <h5>Personal Information</h5>
+                    <form id="form">
+                        <div class="input-tab">
+                            <label for="Email">Email:</label>
+                            <input id="Email" type="text" placeholder="Enter your Email">
+                            <p id="emailErrorMessage"></p>
+                        </div>
+                        <div class="input-tab">
+                            <label for="Username">Username</label>
+                            <input id="Username" type="text" placeholder="Enter your Username">
+                            <p id="usernameErrorMessage"></p> 
+                        </div>
+                        <p class="changeAccountDetails">Change your account details below or <span class="clickHere">click here</span> to change your password</p>
+                        <div class="btn">
+                            <button id="UpdateProfileBtn" class="updateBtn" type="submit" >Update Account</button>                 
+                        </div>
+                    </form>
+                </div>
+                <div class="passwordSection">
+                    <h5>Change your password</h5>
+                    <form id="form" class="passwordForm">
+                        <div class="input-tab">
+                            <label for="password1">Password</label>
+                            <input id="password1" type="password" placeholder="Enter your Password" autocomplete="on">
+                            <p id="passwordErrorMessage1"></p> 
+                        </div>
+                        <div class="input-tab">
+                            <label for="password2">New Password</label>
+                            <input id="password2" type="password" placeholder="Enter your Password" autocomplete="on">
+                            <p id="passwordErrorMessage2"></p>
+                        </div>
+                        <div class="input-tab">
+                            <label for="password3"> Confirm Password</label>
+                            <input id="password3" type="password" placeholder="Enter your Password" autocomplete="on">
+                            <p id="passwordErrorMessage3"></p>
+                        </div>
+                        <p class="changeAccountDetails">Change your password below or <span class="clickHereA">click here</span> to change your account details</p>
+                        <div class="btn">
+                            <button id="UpdatePasswordBtn" class="updateBtn" type="submit" >Update Password</button>                 
+                        </div>
+                    </form>
+                </div>
+                <div class="purchasedSection">
+                    <h5>My Purchases</h5>
+                    <div class="collection">
+                        <div class="frame">
+                            <div class="imageHolder">
+                                <img src="../IMAGES/Pottery/bg2.jpg" alt="">
+                            </div>
+                            <div class="tag">
+                                <div class="show">
+                                    <span>Name: <p>Vase</p></span>
+                                    <span>Category: <p>Set</p></span>
+                                    <span>Price: <p>$300</p></span>
+                                </div>
+                                <div class="hidden">
+                                    <span>Price: <p>$300</p></span>
+                                    <div class="frameButtons">
+                                        <button>Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frame">
+                            <div class="imageHolder">
+                                <img src="../IMAGES/Pottery/bg2.jpg" alt="">
+                            </div>
+                            <div class="tag">
+                                <div class="show">
+                                    <span>Name: <p>Vase</p></span>
+                                    <span>Category: <p>Set</p></span>
+                                    <span>Price: <p>$300</p></span>
+                                </div>
+                                <div class="hidden">
+                                    <span>Price: <p>$300</p></span>
+                                    <div class="frameButtons">
+                                        <button>Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frame">
+                            <div class="imageHolder">
+                                <img src="../IMAGES/Pottery/bg2.jpg" alt="">
+                            </div>
+                            <div class="tag">
+                                <div class="show">
+                                    <span>Name: <p>Vase</p></span>
+                                    <span>Category: <p>Set</p></span>
+                                    <span>Price: <p>$300</p></span>
+                                </div>
+                                <div class="hidden">
+                                    <span>Price: <p>$300</p></span>
+                                    <div class="frameButtons">
+                                        <button>Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frame">
+                            <div class="imageHolder">
+                                <img src="../IMAGES/Pottery/bg2.jpg" alt="">
+                            </div>
+                            <div class="tag">
+                                <div class="show">
+                                    <span>Name: <p>Vase</p></span>
+                                    <span>Category: <p>Set</p></span>
+                                    <span>Price: <p>$300</p></span>
+                                </div>
+                                <div class="hidden">
+                                    <span>Price: <p>$300</p></span>
+                                    <div class="frameButtons">
+                                        <button>Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frame">
+                            <div class="imageHolder">
+                                <img src="../IMAGES/Pottery/bg2.jpg" alt="">
+                            </div>
+                            <div class="tag">
+                                <div class="show">
+                                    <span>Name: <p>Vase</p></span>
+                                    <span>Category: <p>Set</p></span>
+                                    <span>Price: <p>$300</p></span>
+                                </div>
+                                <div class="hidden">
+                                    <span>Price: <p>$300</p></span>
+                                    <div class="frameButtons">
+                                        <button>Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frame">
+                            <div class="imageHolder">
+                                <img src="../IMAGES/Pottery/bg2.jpg" alt="">
+                            </div>
+                            <div class="tag">
+                                <div class="show">
+                                    <span>Name: <p>Vase</p></span>
+                                    <span>Category: <p>Set</p></span>
+                                    <span>Price: <p>$300</p></span>
+                                </div>
+                                <div class="hidden">
+                                    <span>Price: <p>$300</p></span>
+                                    <div class="frameButtons">
+                                        <button>Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frame">
+                            <div class="imageHolder">
+                                <img src="../IMAGES/Pottery/bg2.jpg" alt="">
+                            </div>
+                            <div class="tag">
+                                <div class="show">
+                                    <span>Name: <p>Vase</p></span>
+                                    <span>Category: <p>Set</p></span>
+                                    <span>Price: <p>$300</p></span>
+                                </div>
+                                <div class="hidden">
+                                    <span>Price: <p>$300</p></span>
+                                    <div class="frameButtons">
+                                        <button>Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frame">
+                            <div class="imageHolder">
+                                <img src="../IMAGES/Pottery/bg2.jpg" alt="">
+                            </div>
+                            <div class="tag">
+                                <div class="show">
+                                    <span>Name: <p>Vase</p></span>
+                                    <span>Category: <p>Set</p></span>
+                                    <span>Price: <p>$300</p></span>
+                                </div>
+                                <div class="hidden">
+                                    <span>Price: <p>$300</p></span>
+                                    <div class="frameButtons">
+                                        <button>Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frame">
+                            <div class="imageHolder">
+                                <img src="../IMAGES/Pottery/bg2.jpg" alt="">
+                            </div>
+                            <div class="tag">
+                                <div class="show">
+                                    <span>Name: <p>Vase</p></span>
+                                    <span>Category: <p>Set</p></span>
+                                    <span>Price: <p>$300</p></span>
+                                </div>
+                                <div class="hidden">
+                                    <span>Price: <p>$300</p></span>
+                                    <div class="frameButtons">
+                                        <button>Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="orderSection">
+                    <h5>Orders</h5>
+                    <div class="orderArea">
+                        <p>You have no orders an the moment</p>
+                    </div>
+                </div>
+
+
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="columns">
+            <div class="firstColumn">
+                <h5>Potter Pallete</h5>
+                <p>Ceramic paint palettes, whether shaped uniquely or hand-built,
+                     reflect the artist's touch and hold personal significance.</p>
+            </div>
+            <div class="secondColumn">
+                <h5>Contact Info</h5>
+                <p>No 8, Kenya Street Barnawa</p>
+                <p> potterpallete46@gmail.com</p>
+                <p>+234-8153232107</p>
+            </div>
+            <div class="thirdColumn">
+                <ul>
+                    <li><i class="fab fa-facebook-f"></i></li>
+                    <li><i class="fab fa-linkedin-in"></i></li>
+                    <li><i class="fab fa-twitter"></i></li>
+                    <li><i class="fab fa-instagram"></i></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../JS/trial_dashboard.js"></script>
+</body>
+</html>

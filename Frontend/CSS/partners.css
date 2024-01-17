@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f2f2f2;
+}
+
+@keyframes slide {
+    from{
+        transform: translateX(0);
+    }    
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+
+.partners-logos{
+    overflow: hidden;
+    padding: 60px 0;
+    background-color: white;
+    white-space: nowrap;  
+    position: relative;
+}
+
+.partners-logos:after,
+.partners-logos:before{
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: " ";
+    z-index: 2; 
+}
+.partners-logos:before{
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+.parthners-logos:after{
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.partners-logos-slide{
+    /* white-space: nowrap;    */
+    animation: 20s slide infinite linear ;
+    display: inline-block;
+}
+
+.partners-logos:hover .logos-slide{
+    animation-play-state: paused; 
+}
+
+.partners-logos-slide img{
+    height: 100px;
+    margin: 0 40px;
+}
