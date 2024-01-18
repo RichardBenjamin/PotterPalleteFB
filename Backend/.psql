@@ -194,4 +194,4 @@ AND search_column ILIKE '%search_term%';
 
 
 url 
-http://localhost:305/register/explore/category/mug
+https://potterpallete.onrender.comregister/explore/category/mug

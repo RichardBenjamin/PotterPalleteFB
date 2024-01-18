@@ -113,7 +113,7 @@ showAccountLink.addEventListener('click', ()=>{
 								password2: password2.value.trim(),
 								};
 
-								updatePassword(`http://localhost:305/register/changepassword/${id}`, userData);
+								updatePassword(`https://potterpallete.onrender.comregister/changepassword/${id}`, userData);
 							}
 					}
 
@@ -213,7 +213,7 @@ function showProfile(){
 					name: Username.value.trim(),
 					email: Email.value
 				};
-				updateData(`http://localhost:305/register/updateprofile2/${id}`, userData);
+				updateData(`https://potterpallete.onrender.comregister/updateprofile2/${id}`, userData);
 				}
 
 			}
@@ -358,7 +358,7 @@ let id = 0;
 async function getUsers(){
 	try {
 		const response = await fetch(
-			`http://localhost:305/register/Allusers`
+			`https://potterpallete.onrender.comregister/Allusers`
 		)
 			const data = await response.json()
 			
@@ -462,7 +462,7 @@ submitBtn2.addEventListener('click', async (e) => {
       password: adminpassword.value,
 	  roles: "Admin"
     };
-    postData(`http://localhost:305/register`, userData);
+    postData(`https://potterpallete.onrender.comregister`, userData);
   }
 })
 
