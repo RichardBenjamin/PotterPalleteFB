@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Italianno&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200&family=Roboto:wght@100;300;400;500;700&display=swap');
-/*** Spinner Start ***/
-/*** Spinner ***/
+
 
 
 *{
@@ -139,14 +138,12 @@
     transform: translateY(-50%);
     margin-bottom: 5px;
     margin-left: -50px;
-    /* border: 1px solid var(--bs-primary) !important; */
 }
 
 .sub-title {
     position: relative;
     display: inline-block;
     text-transform: uppercase;
-    /* color: var(--bs-primary); */
     text-decoration: underline;
     text-align: center;
     font-family: 'Roboto', sans-serif;
@@ -161,7 +158,6 @@
     transform: translateY(-50%);
     margin-top: 8px;
     margin-right: -100px;
-    /* border: 1px solid var(--bs-primary) !important; */
 }
 
 .sub-title::after {
@@ -173,7 +169,6 @@
     transform: translateY(-50%);
     margin-bottom: 8px;
     margin-right: -50px;
-    /* border: 1px solid var(--bs-primary) !important; */
 }
 
 
