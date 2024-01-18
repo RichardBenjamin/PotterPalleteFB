@@ -135,7 +135,7 @@ personalInformation.addEventListener('click', ()=>{
 								password2: password2.value.trim(),
 								};
 
-								updatePassword(`https://potterpallete.onrender.comregister/changepassword/${id}`, userData);
+								updatePassword(`https://potterpallete.onrender.com/register/changepassword/${id}`, userData);
 							}
 					}
 
@@ -250,7 +250,7 @@ function showProfile(){
 					name: Username.value.trim(),
 					email: Email.value
 				};
-				updateData(`https://potterpallete.onrender.comregister/updateprofile2/${id}`, userData);
+				updateData(`https://potterpallete.onrender.com/register/updateprofile2/${id}`, userData);
 				}
 
 			}
@@ -472,7 +472,7 @@ async function getuserPurchasedItem(){
         console.log("Get purchased Items");
 		const userId = localStorage.getItem('id')
 		const response = await fetch(
-            `https://potterpallete.onrender.comcart/getuserPurchasedItem/${userId}`
+            `https://potterpallete.onrender.com/cart/getuserPurchasedItem/${userId}`
             )
 			const data = await response.json()
 			console.log(data);	
@@ -541,7 +541,7 @@ async function getuserPurchasedItem(){
 			const userId = localStorage.getItem('id')
 			const Total = document.getElementById('Total')
 			const response = await fetch(
-				`https://potterpallete.onrender.comcart/getuserCartItem/${userId}`
+				`https://potterpallete.onrender.com/cart/getuserCartItem/${userId}`
 				)
 				const data = await response.json()
 				console.log("Checking for error");
@@ -648,7 +648,7 @@ getuserCartItem()
 			}
 	
 			function addingToPurchaseTable(a, b){
-				const PurchaseUrl = `https://potterpallete.onrender.comcart/purchasedTable`
+				const PurchaseUrl = `https://potterpallete.onrender.com/cart/purchasedTable`
 				const CartItems = {
 					userId: b,
 					itemId: a
@@ -663,7 +663,7 @@ getuserCartItem()
 				try {
 					const userId = localStorage.getItem('id')
 					const response = await fetch(
-						`https://potterpallete.onrender.comcart/getuserCartItem/${userId}`
+						`https://potterpallete.onrender.com/cart/getuserCartItem/${userId}`
 						)
 						const data = await response.json()
 						console.log(data);
@@ -727,7 +727,7 @@ getuserCartItem()
 	
 	function deleteItem(item_Id){
 		console.log("checking 3");
-		const DeleteUrl = `https://potterpallete.onrender.comcart/deleteCartItem`
+		const DeleteUrl = `https://potterpallete.onrender.com/cart/deleteCartItem`
 		const user_Id = localStorage.getItem('id')
 		console.log(item_Id);
 		const CartItems = {
@@ -779,7 +779,7 @@ getuserCartItem()
 	
 	function deleteAllItem(){
 		console.log("checking 3 all items");
-		const DeleteUrl = `https://potterpallete.onrender.comcart/deleteAllCartItem`
+		const DeleteUrl = `https://potterpallete.onrender.com/cart/deleteAllCartItem`
 		const user_Id = localStorage.getItem('id')
 		const CartItems = {
 			userId: user_Id,
@@ -802,7 +802,7 @@ getuserCartItem()
                             
                             
                                                             function addingToCart(a, b){
-                                                                const CartUrl = `https://potterpallete.onrender.comcart/getCartItem`
+                                                                const CartUrl = `https://potterpallete.onrender.com/cart/getCartItem`
                                                                 const CartItems = {
                                                                     userId: b,
                                                                     itemId: a
@@ -858,7 +858,7 @@ getuserCartItem()
                                     const userId = localStorage.getItem('id')
                                     const Total = document.getElementById('price')
                                     const response = await fetch(
-                                        `https://potterpallete.onrender.comcart/getuserCartItem/${userId}`
+                                        `https://potterpallete.onrender.com/cart/getuserCartItem/${userId}`
                                         )
                                         const data = await response.json()
                                         console.log(data);
@@ -933,7 +933,7 @@ getuserCartItem()
                     
                     
                     function deleteItem(item_Id){
-                        const DeleteUrl = `https://potterpallete.onrender.comcart/deleteCartItem`
+                        const DeleteUrl = `https://potterpallete.onrender.com/cart/deleteCartItem`
                         const user_Id = localStorage.getItem('id')
                         const CartItems = {
                             userId: user_Id,
@@ -945,7 +945,7 @@ getuserCartItem()
         
                     
                     function deletePurchaseItem(item_Id){
-                        const DeleteUrl = `https://potterpallete.onrender.comcart/deletePurchasedItem`
+                        const DeleteUrl = `https://potterpallete.onrender.com/cart/deletePurchasedItem`
                         const user_Id = localStorage.getItem('id')
                         const CartItems = {
                             userId: user_Id,
@@ -986,7 +986,7 @@ getuserCartItem()
                     
                     function deleteAllItem(){
                         console.log("checking 3 all items");
-                        const DeleteUrl = `https://potterpallete.onrender.comcart/deleteAllCartItem`
+                        const DeleteUrl = `https://potterpallete.onrender.com/cart/deleteAllCartItem`
                         const user_Id = localStorage.getItem('id')
                         const CartItems = {
                             userId: user_Id,

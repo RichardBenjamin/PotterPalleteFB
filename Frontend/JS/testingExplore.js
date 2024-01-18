@@ -17,7 +17,7 @@ searchIcon.addEventListener('click', ()=>{
 async function getItems(){
 try {
 const response = await fetch(
-	`https://potterpallete.onrender.comregister/explore`)
+	`https://potterpallete.onrender.com/register/explore`)
 
 const data = await response.json()
 const userId = localStorage.getItem('id')
@@ -56,7 +56,7 @@ frame.innerHTML = `
 
 	Trial.appendChild(frame);
 	function addingToCart(a, b){
-	const CartUrl = `https://potterpallete.onrender.comcart/getCartItem`
+	const CartUrl = `https://potterpallete.onrender.com/cart/getCartItem`
 	const CartItems = {
 		userId: b,
 		itemId: a
@@ -82,7 +82,7 @@ console.log(error);
 async function getSearchItems(){
 try {
 const response = await fetch(
-	`https://potterpallete.onrender.comregister/explore/category/${searchBox.value}`)
+	`https://potterpallete.onrender.com/register/explore/category/${searchBox.value}`)
 	const data = await response.json()
 	const userId = localStorage.getItem('id')
 	const Trial = document.getElementById('Trial');
@@ -130,7 +130,7 @@ console.log(error);
 
 
 function addingToCart(a, b){
-const CartUrl = `https://potterpallete.onrender.comcart/getCartItem`
+const CartUrl = `https://potterpallete.onrender.com/cart/getCartItem`
 const CartItems = {
 userId: b,
 itemId: a
@@ -266,7 +266,7 @@ const userId = localStorage.getItem('id')
 console.log(userId);
 const Total = document.getElementById('Total')
 const response = await fetch(
-`https://potterpallete.onrender.comcart/getuserCartItem/${userId}`
+`https://potterpallete.onrender.com/cart/getuserCartItem/${userId}`
 )
 const data = await response.json()
 const cartNumber = document.getElementById('cartNumber')
@@ -314,7 +314,7 @@ getuserCartItem()
 async function getAllCartItems(){
 try {
 const response = await fetch(
-`https://potterpallete.onrender.comcart/getAllCartItems`
+`https://potterpallete.onrender.com/cart/getAllCartItems`
 )
 console.log(response);
 const data = await response.json()
@@ -409,7 +409,7 @@ console.error(`Error: ${err}`);
 
 function deleteItem(item_Id){
 console.log("checking 3");
-const DeleteUrl = `https://potterpallete.onrender.comcart/deleteCartItem`
+const DeleteUrl = `https://potterpallete.onrender.com/cart/deleteCartItem`
 const user_Id = localStorage.getItem('id')
 console.log(item_Id);
 const CartItems = {
@@ -465,7 +465,7 @@ console.log(bodydata.message);
 }
 
 function addingToPurchaseTable(a, b){
-const PurchaseUrl = `https://potterpallete.onrender.comcart/purchasedTable`
+const PurchaseUrl = `https://potterpallete.onrender.com/cart/purchasedTable`
 const CartItems = {
 	userId: b,
 	itemId: a
@@ -480,7 +480,7 @@ async function movePurchasedItems(){
 try {
 	const userId = localStorage.getItem('id')
 	const response = await fetch(
-		`https://potterpallete.onrender.comcart/getuserCartItem/${userId}`
+		`https://potterpallete.onrender.com/cart/getuserCartItem/${userId}`
 		)
 		const data = await response.json()
 		console.log(data);
@@ -579,7 +579,7 @@ console.error(`Error: ${err}`);
 
 function deleteAllItem(){
 console.log("checking 3 all items");
-const DeleteUrl = `https://potterpallete.onrender.comcart/deleteAllCartItem`
+const DeleteUrl = `https://potterpallete.onrender.com/cart/deleteAllCartItem`
 const user_Id = localStorage.getItem('id')
 const CartItems = {
 userId: user_Id,

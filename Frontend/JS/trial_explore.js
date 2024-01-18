@@ -44,7 +44,7 @@ closeCart.addEventListener("click", () => {
                                 async function getItems(){
                                     try {
                                         const response = await fetch(
-                                            `https://potterpallete.onrender.comregister/explore`)
+                                            `https://potterpallete.onrender.com/register/explore`)
                             
                                         const data = await response.json()
                                         const userId = localStorage.getItem('id')
@@ -110,7 +110,7 @@ closeCart.addEventListener("click", () => {
                                     } else {
                                         
                                         const response = await fetch(
-                                            `https://potterpallete.onrender.comexplore/category/${searchBox.value}`)
+                                            `https://potterpallete.onrender.com/explore/category/${searchBox.value}`)
                                             const data = await response.json()
                                             if (data.length == 0) {
                                                 alert(`${searchBox.value} is cuurently not available`)
@@ -167,7 +167,7 @@ closeCart.addEventListener("click", () => {
                             
                             async function detailOfItem(productItemId){
                                             const response = await fetch(
-                                                `https://potterpallete.onrender.comregister/explore/${productItemId}`)
+                                                `https://potterpallete.onrender.com/register/explore/${productItemId}`)
                                                 const data = await response.json()
                                                 const detailsid = document.getElementById('details')
                                                 const modal = document.getElementById('modal')
@@ -245,7 +245,7 @@ closeCart.addEventListener("click", () => {
                                         if (!token) {
                                             alert("Login to add to cart")
                                         } else {
-                                            const CartUrl = `https://potterpallete.onrender.comcart/getCartItem`
+                                            const CartUrl = `https://potterpallete.onrender.com/cart/getCartItem`
                                             const CartItems = {
                                                 userId: b,
                                                 itemId: a
@@ -303,7 +303,7 @@ closeCart.addEventListener("click", () => {
                                                         const userId = localStorage.getItem('id')
                                                         const Total = document.getElementById('price')
                                                         const response = await fetch(
-                                                            `https://potterpallete.onrender.comcart/getuserCartItem/${userId}`
+                                                            `https://potterpallete.onrender.com/cart/getuserCartItem/${userId}`
                                                             )
                                                             // console.log(userId);
                                                             const data = await response.json()
@@ -388,7 +388,7 @@ closeCart.addEventListener("click", () => {
                                         
                                         
                                         function deleteItem(item_Id){
-                                            const DeleteUrl = `https://potterpallete.onrender.comcart/deleteCartItem`
+                                            const DeleteUrl = `https://potterpallete.onrender.com/cart/deleteCartItem`
                                             const user_Id = localStorage.getItem('id')
                                             const CartItems = {
                                                 userId: user_Id,
@@ -429,7 +429,7 @@ closeCart.addEventListener("click", () => {
                                         
                                         function deleteAllItem(){
                                             console.log("checking 3 all items");
-                                            const DeleteUrl = `https://potterpallete.onrender.comcart/deleteAllCartItem`
+                                            const DeleteUrl = `https://potterpallete.onrender.com/cart/deleteAllCartItem`
                                             const user_Id = localStorage.getItem('id')
                                             const CartItems = {
                                                 userId: user_Id,
@@ -502,7 +502,7 @@ closeCart.addEventListener("click", () => {
                             
                                     
                                     function addingToPurchaseTable(a, b){
-                                        const PurchaseUrl = `https://potterpallete.onrender.comcart/purchasedTable`
+                                        const PurchaseUrl = `https://potterpallete.onrender.com/cart/purchasedTable`
                                         const CartItems = {
                                             userId: b,
                                             itemId: a
@@ -535,7 +535,7 @@ closeCart.addEventListener("click", () => {
                                         try {
                                             const userId = localStorage.getItem('id')
                                             const response = await fetch(
-                                                `https://potterpallete.onrender.comcart/getuserCartItem/${userId}`
+                                                `https://potterpallete.onrender.com/cart/getuserCartItem/${userId}`
                                                 )
                                                 const data = await response.json()
                                                 console.log(data);
