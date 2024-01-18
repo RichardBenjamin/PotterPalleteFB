@@ -611,3 +611,11 @@ footer {
         font-size: 13px;
     }
     
+
+
+/* Added recently */
+
+.top-bar p{
+    text-align: center; 
+    margin-left: 45%;
+}

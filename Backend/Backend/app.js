@@ -9,8 +9,12 @@ const talentDashboard = require("./routes/talentDashboard");
 const cart = require("./routes/cart")
 const uploads = require("./routes/uploads")
 const cors = require("cors");
+// const corsOptions = {
+//   origin: [" * "],
+//   methods: ["GET", "POST", "PUT", "PATCH","DELETE"],
+// };
 const corsOptions = {
-  origin: ["http://127.0.0.1:5501", "http://127.0.0.1:5500", "http://127.0.0.1:5551"],
+  origin: ["http://127.0.0.1:5501", "http://127.0.0.1:5500", "http://127.0.0.1:5551", "http://127.0.0.1:5502"],
   methods: ["GET", "POST", "PUT", "PATCH","DELETE"],
 };
 const multer  = require('multer');

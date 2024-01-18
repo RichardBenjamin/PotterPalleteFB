@@ -10,8 +10,15 @@ cartIcon.addEventListener("click", () => {
 });
 
 closeCart.addEventListener("click", () => {
+	leftSidebar.classList.remove('active')
   cart.classList.remove("active");
 });
+
+const leftSidebar = document.querySelector('.leftSidebar')
+document.querySelector('#MenuBtn').onclick = () =>{
+    console.log("huuh");
+    leftSidebar.classList.toggle('active')
+}
 	
 
     
@@ -156,7 +163,7 @@ personalInformation.addEventListener('click', ()=>{
 
 	const logoName = document.getElementById('logoName');
 logoName.addEventListener('click', ()=>{
-    window.location.href = '../HTMLS/index.html'
+    window.location.href = '../index.html'
 })
 
 getuserCartItem()
@@ -168,6 +175,8 @@ function showProfile(){
     purchasedSection.style.display = 'none';
     orderSection.style.display = 'none';
     personalInformationSection.style.display = 'block';
+	leftSidebar.classList.remove('active')
+	console.log("jijiijiji");
 	}
 	
 	function showPassword(){
@@ -175,6 +184,7 @@ function showProfile(){
         purchasedSection.style.display = 'none';
         orderSection.style.display = 'none';
         passwordSection.style.display = 'block';
+		leftSidebar.classList.remove('active')
 	}
 	
 	function showPurchases(){
@@ -182,6 +192,7 @@ function showProfile(){
         orderSection.style.display = 'none';
         passwordSection.style.display = 'none';
         purchasedSection.style.display = 'block';
+		leftSidebar.classList.remove('active')
 	}
 	
 	function showMyOrders(){
@@ -189,6 +200,7 @@ function showProfile(){
         passwordSection.style.display = 'none';
         purchasedSection.style.display = 'none';
         orderSection.style.display = 'block';
+		leftSidebar.classList.remove('active')
 	}
 
 	function Logout(){
@@ -202,7 +214,7 @@ function showProfile(){
 		localStorage.removeItem("id")
 		localStorage.removeItem("price")
 		localStorage.removeItem("token")
-		window.location.href = "../HTMLS/index.html";
+		window.location.href = "../index.html";
 	}
 
 	function hideMenuBar(){

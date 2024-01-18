@@ -224,7 +224,7 @@ width: 22px; */
     height: 40vh;
     overflow: auto;
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto;
 }
 
 
@@ -437,4 +437,106 @@ footer {
 
 .purchasedSection{
     display: none;
+}
+
+
+
+.top-bar p{
+    text-align: center; 
+    margin-left: 45%;
+}
+
+
+@media (max-width: 1500px){
+    .collection{
+        grid-template-columns: auto auto auto;
+    }    
+}
+
+
+@media (max-width: 1150px){
+    .collection{
+        grid-template-columns: auto auto;
+        gap: 6vh;
+    }    
+    .container{
+        padding-left: 10%;
+    }
+}
+
+
+@media (max-width: 1000px){
+    .collection{
+        gap: 3vh;
+    }    
+    /* width: 50vh; */
+    .frame{
+        width: 23vh;
+        margin-left: 1vh;
+    }
+    .container{
+        padding-left: 7%;
+    }
+}
+
+@media (max-width: 900px){
+    .collection{
+        grid-template-columns: auto auto;
+        gap: 6vh;
+        /* width: 90vh; */
+    }    
+    .container{
+        width: 100%;
+    }
+    .frame{
+        width: 40vh;
+        margin-left: 4vh;
+    }
+footer{
+    z-index: 5000;
+    position: absolute;
+}
+    
+.leftSidebar{
+    position: absolute;
+    left: -80%;
+    top: 4%;
+    transition: 1s;
+    background-color: white;
+    padding: 4.5vh;
+    height: 100%;
+    z-index: 4;
+}
+
+
+.leftSidebar.active{
+    left: 1vh;
+
+}
+}
+/* 
+.leftSidebar{
+    position: absolute;
+    left: -80%;
+    top: 4%;
+    transition: 2s;
+    background-color: white;
+    padding: 3vh;
+}
+
+
+.leftSidebar.active{
+    left: 15vh;
+    top: 4%;
+    background-color: #fff;
+    z-index: 400000;
+} */
+
+.leftsidenav{
+    display: flex;
+    gap: 10px;
+}
+
+.purchasedSection h5{
+    margin-left: 4vh;
 }

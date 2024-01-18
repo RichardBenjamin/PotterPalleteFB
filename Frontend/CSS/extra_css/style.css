@@ -1400,8 +1400,22 @@ header {
      nav.active{
             right: 0%;
         }
+
+        nav li a{
+            color: #000;
+        }
+        header nav{
+            width: 30%;
+        }
+
     
     }
+    
+    @media (max-width:775px){
+        header nav{
+            width: 40%;
+        }
+}
     
     @media (max-width:500px){
         a,button{
@@ -1438,8 +1452,18 @@ header {
     .dot{
         display: none;
     }
+    header nav{
+        width: 60%;
+    }
     
     }
+
+    
+    @media (max-width:400px){
+        header nav{
+            width: 70%;
+        }
+}
 
     
     @media (max-width:360px){
@@ -1450,7 +1474,7 @@ header {
         padding: 30px 2%;
     }
     header nav{
-            width: 75%;
+            width: 80%;
         }
     
         .txt{
@@ -1482,3 +1506,19 @@ header {
     .potterSection img{
         width: 80%;
     } */
+
+
+
+.nexti{
+    width: 85% !important;
+    margin-left: 6%;
+
+}
+
+@media (max-width:500px){
+    .nexti{
+        width: 80% !important;
+        margin-left: 8%;
+    
+    }
+}

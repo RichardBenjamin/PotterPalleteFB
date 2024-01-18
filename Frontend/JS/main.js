@@ -114,36 +114,13 @@ function slidefun(n){
 
 
 
-function Planters(){
+function explore(){
     const category = "Planters"
     localStorage.setItem("categoryImage",category)
 
-    window.location.href="./trial_explore.html"
+    window.location.href="./HTMLS/trial_explore.html"
 }
 
-
-function Tableware(){
-    const category = "Tableware"
-    localStorage.setItem("categoryImage",category)
-
-    window.location.href="./trial_explore.html"
-}
-
-
-function Cookware(){
-    const category = "Cookware"
-    localStorage.setItem("categoryImage",category)
-
-    window.location.href="./trial_explore.html"
-}
-
-
-function Decorative_Pieces(){
-    const category = "Decorative Pieces"
-    localStorage.setItem("categoryImage",category)
-
-    window.location.href=".trial_explore.html"
-}
 
     
 
@@ -154,7 +131,7 @@ function Decorative_Pieces(){
 
 
 logoName.addEventListener('click', ()=>{
-    window.location.href = '../HTMLS/index.html'
+    window.location.href = './index.html'
 })
 
 
@@ -164,28 +141,33 @@ logoName.addEventListener('click', ()=>{
 const token = localStorage.getItem('token')
 const localName = localStorage.getItem('username');
 const localRole = localStorage.getItem('roles');
-// const userbtn  = document.getElementById('user-btn');
-// console.log(localName);
 
 
 if(!token){
+    profileIcon.style.display = "none";
+    const About_Signup = document.getElementById('About_Signup');
     const signUp = document.getElementById('Sign-UpBtn');
     signUp.addEventListener('click', ()=>{
-    window.location.href = '../HTMLS/register2.html'
+    window.location.href = './HTMLS/register2.html'
+    })
+    About_Signup.addEventListener('click', ()=>{
+    window.location.href = './HTMLS/register2.html'
     })
     console.log("No token");
-    profileIcon.style.display = "none";
     signUp.style.display = "block"
+    About_Signup.style.display = "inline-block"
 
 } else{
     const signUp = document.getElementById('Sign-UpBtn');
+    const About_Signup = document.getElementById('About_Signup');
     console.log("token");
     profileIcon.style.display = "block";
     signUp.style.display = "none";
     profileLetter.innerText = localName.charAt(0).toUpperCase();
     profileIcon.addEventListener('click', ()=>{
-        window.location.href = `../HTMLS/trial_dashboard${localRole}.html`
+        window.location.href = `./HTMLS/trial_dashboard${localRole}.html`
     })
+    About_Signup.style.display = "none"
 
 }
 
@@ -204,6 +186,7 @@ function myFunction() {
     navlink5.style.color= "black"
     logoName.style.color = "black"
     header.style.borderColor = "black"
+    menuicon.src="https://res.cloudinary.com/kene281/image/upload/v1705549062/Potter%20Pallete/Icons/menu-svgrepo-com_utog3v.svg"
     if (!token) {
         SignUpBtn.style.backgroundColor = "black"
     SignUpBtninner.style.color = "white"
@@ -221,9 +204,11 @@ else{
     navlink5.style.color= "white"
     logoName.style.color = "white"
     header.style.borderColor = "white"
+    menuicon.src="https://res.cloudinary.com/kene281/image/upload/v1705550228/Potter%20Pallete/Icons/menu-white_ouqft6.svg"
     if (!token) {
         SignUpBtn.style.backgroundColor = "white"
     SignUpBtninner.style.color = "black"
+    About_Signup.style.display = "block"
     } else {
         profileIcon.style.backgroundColor ="white"
         profileLetter.style.color ="black"
