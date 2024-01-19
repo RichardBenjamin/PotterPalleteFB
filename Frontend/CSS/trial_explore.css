@@ -545,7 +545,7 @@ font-size: 17px;
 
 .modal{
     display: none; 
-   /* position: fixed;  */
+   position: fixed; 
    z-index: 200; 
    padding-top: 100px; 
    left: 0;

@@ -484,17 +484,17 @@ closeCart.addEventListener("click", () => {
                             
                                     const Checkout = document.getElementById('Checkout')
                                     Checkout.addEventListener('click',()=>{
-                                        console.log("working");
                                         movePurchasedItems()
                                         deleteAllItem()
-                                        const cartNumber = document.getElementById('cartNumber')
-                                        cartNumber.innerHTML = 0
                                         const CartHolder = document.getElementById('cart-content');
                                         const Total = document.getElementById('price')
                                         Total.innerHTML = ''
                                         CartHolder.innerHTML = '';
                                         cart.classList.remove("active");
-                                        window.location.href="../HTMLS/paymentStack.html"
+                                        setTimeout(() => {
+                                            getuserPurchasedItem()
+                                            window.location.href="../HTMLS/paymentStack.html"
+                                        }, 2000);
                             
                                     })
                                                     
@@ -552,6 +552,68 @@ closeCart.addEventListener("click", () => {
                                     
                                     }
                                     }
+
+
+
+
+                                    function passwordValidation2(){
+                                        if (password2.value === '') {
+                                            passwordErrorMessage2.innerText = 'Please enter your Password'
+                                            password2.classList.add('error');
+                                        }   else if (password2.value.trim().length < 8) {
+                                            passwordErrorMessage2.innerText = 'Password must be at least 8 characters';
+                                        }   else if (!password2.value.match(passwordPattern)){
+                                            passwordErrorMessage2.innerText = "Please enter at least 8 character with number, symbol, small and capital letter.";
+                                            passwordErrorMessage2.classList.add('error');
+                                        }   else {
+                                            passwordErrorMessage2.innerText = '';
+                                            return true;
+                                        }
+                                    }
+                                    
+                                    // password2.addEventListener("input", passwordValidation2);
+                                    
+                                    function confirmPasswordValidation(){
+                                        if  (password3.value !== password2.value) {
+                                            passwordErrorMessage3.innerText = "Passwords don't match";
+                                            passwordErrorMessage3.classList.add('error')
+                                        }   else {
+                                            passwordErrorMessage3.innerText = '';
+                                            return true
+                                        }
+                                    }
+                                    
+                                    // password3.addEventListener("input", confirmPasswordValidation);
+                                    
+                                    
+                                    
+                                                            
+                                                            
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    // Add to Cart
+                                    
+                                    async function getuserPurchasedItem(){
+                                        try {
+                                            console.log("Get purchased Items");
+                                            const userId = localStorage.getItem('id')
+                                            const response = await fetch(
+                                                `https://potterpallete.onrender.com/cart/getuserPurchasedItem/${userId}`
+                                                )
+                                                const data = await response.json()
+                                                console.log(data);	
+                                                console.log("checking 1");
+                                        
+                                        } catch (error) {
+                                            
+                                                }
+                                        }
                                                     
                                                     
                                                     
@@ -566,11 +628,6 @@ closeCart.addEventListener("click", () => {
                                     let searchForm = document.querySelector('.search-form');
                             
                             
-                                    // document.querySelector('#menu-btn').onclick = () =>{
-                                    //     searchForm.classList.remove('active')
-                                    //     cartContainer.classList.remove('active')
-                                    //     navbar.classList.toggle('active')
-                                    // }
                             
                             
                                     window.onscroll = () => {

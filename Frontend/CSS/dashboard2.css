@@ -22,11 +22,9 @@ body{
 
 .top-bar{
     font-size: 14px;
-    display: flex;
     background-color: #EBEBEB;
-    justify-content: space-between;
-    align-items: center;
     padding: 10px 7%;
+    text-align: center;
 }
 
 .leftSide{
@@ -36,6 +34,7 @@ body{
 
 .logo{
     font-size: 20px;
+    cursor: pointer;
 }
 .container{
     /* width: 80%; */
@@ -276,8 +275,8 @@ width: 22px; */
     right: 0;
     right: -100%; 
     width: 360px;
-    height: 85%;
-    height: 79vh;
+    height: 75%;
+    /* height: 79vh; */
     overflow-y: auto;
     overflow-x: hidden;
     padding: 20px;
@@ -286,6 +285,7 @@ width: 22px; */
     border: 1px solid black;
     transition: 1.5s;
     z-index: 600000;
+    border-radius: 5px;
 }
 .cart.active{
     right: 0;
@@ -301,7 +301,7 @@ width: 22px; */
 }
 .cart-content{
     overflow-y: auto;
-    height: 80%;
+    height: 70%;
 
 }
 ::-webkit-scrollbar {
@@ -444,7 +444,6 @@ footer {
 
 .top-bar p{
     text-align: center; 
-    margin-left: 45%;
 }
 
 
@@ -522,7 +521,7 @@ footer{
 
 @media (max-width: 730px){
     .container{
-        padding-left: 1%;
+        padding-left: 3%;
     }
  }
 
@@ -535,6 +534,12 @@ footer{
         grid-template-columns: auto auto;
         gap: 4vh;
     } 
+    .input-tab input{
+        width: 100%;
+    }
+    .container{
+        padding-left: 4%;
+    }
  }
 
 @media (max-width: 600px){
@@ -566,6 +571,23 @@ footer{
     }
  }
 
+@media (max-width: 455px){
+    .frame{
+        margin-left: 4.5vh;
+    }
+    .purchasedSection h5 {
+        margin-left: 3vh;
+        text-align: center;
+    }
+    .menu__link{
+        font-size: 1rem;
+    }
+    .cart{
+        right: -120%;
+        width: 300px;
+    }
+ }
+
 @media (max-width: 425px){
     .frame{
         width: 35vh;
@@ -575,9 +597,13 @@ footer{
         height: 60vh;
     }
     
-.purchasedSection h5{
-    margin-left: 9vh;
-}
+    .purchasedSection h5{
+        margin-left: 9vh;
+    }
+    .input-tab input{
+        width: 90%;
+    }
+
  }
 @media (max-width: 390px){
     .frame{
@@ -601,8 +627,8 @@ footer{
 
  @media (max-width: 380px){
     .container{
-        padding: 0;
-        /* width: 30vh; */
+        padding-right: 3%;
+        padding-left: 3%;
     }
     .frame{
         width: 30vh;
@@ -610,23 +636,31 @@ footer{
     }
  }
 
-/* 
-.leftSidebar{
-    position: absolute;
-    left: -80%;
-    top: 4%;
-    transition: 2s;
-    background-color: white;
-    padding: 3vh;
+ @media (max-width: 360px){
+
+    .frame{
+        margin-left: 4vh;
+    }
+ }
+
+ @media (max-width: 330px){
+
+    .frame{
+        margin-left: 2.4vh;
+    }
+ }
+
+ @media (max-width: 310px){
+
+    .frame{
+        margin-left: 1.4vh;
+    }
+ }
+
+.top-container{
+    padding-left: 0px;
 }
 
-
-.leftSidebar.active{
-    left: 15vh;
-    top: 4%;
-    background-color: #fff;
-    z-index: 400000;
-} */
 
 .leftsidenav{
     display: flex;
@@ -636,3 +670,93 @@ footer{
 .purchasedSection h5{
     margin-left: 4vh;
 }
+
+.container h4 {
+    margin-top: 5%;
+    margin-bottom: 4%;
+}
+
+.menu ul li{
+    margin-top: 18%;
+}
+
+
+#logoName img{
+    height:17px;
+    margin-right: 2px;
+}
+
+
+
+
+   
+.footer {
+    position: relative;
+    width: 100%;
+    background: black;
+    min-height: 140px;
+    min-height: 230px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .social-icon,
+  .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    margin-top: -10px;
+    flex-wrap: wrap;
+  }
+  
+  .social-icon__item,
+  .menu__item {
+    list-style: none;
+  }
+  
+  .social-icon__link {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+  }
+  .social-icon__link:hover {
+    transform: translateY(-10px);
+  }
+  
+  .menu__link {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+    font-weight: 300;
+  }
+  
+  .menu__link:hover {
+    opacity: 1;
+  }
+  
+  .footer p {
+    color: #fff;
+    margin: 15px 0 10px 0;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+
+
+
+  @media (max-width: 455px){
+    .menu__link{
+        font-size: 1rem;
+    }
+ }

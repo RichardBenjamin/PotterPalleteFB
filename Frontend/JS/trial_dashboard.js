@@ -509,21 +509,6 @@ async function getuserPurchasedItem(){
 			})
 
 
-        //     <div class="imageHolder">
-        //     <img src=${item.images} alt="">
-        // </div>
-        // <div class="tag">
-        //     <div class="show">
-        //         <span>Name: <p>${item.itemname}</p></span>
-        //         <span>Category: <p>${item.price}</p></span>
-        //         <span>Price: <p>${item.price}</p></span>
-        //     </div>
-        //     <div class="hidden">
-        //         <div class="frameButtons">
-        //         <button class="deleteBtn" onclick="deleteItem(${item.id});">Delete</button>
-        //         </div>
-        //     </div>
-        // </div>
 
 			console.log("checking 1");
 	
