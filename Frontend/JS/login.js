@@ -34,7 +34,7 @@ const email = document.querySelector('#email'),
                         email: email.value.trim(),
                         password: password.value,
                       };
-                      console.log(userData);
+                      // console.log(userData);
                       loginPost(`${baseURL}login`, userData);
                     }
                   })

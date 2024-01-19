@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../CSS/dashboard2Admin.css"> -->
+    <link rel="shortcut icon" href="https://res.cloudinary.com/kene281/image/upload/v1705549075/Potter%20Pallete/Icons/vase-black_munnec.svg"  type="image/x-icon">
+    <!-- <link href="../css2/bootstrap.min.css" rel="stylesheet">
+    <link href="../css2/style.css" rel="stylesheet"> -->
+    <title>Dashboard</title>
+</head>
+<body>
+    <style>
+        *{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    scroll-padding: 2rem;
+}
+body{
+    background-color: white;
+    /* overflow: hidden; */
+}
+
+.top-bar{
+    font-size: 14px;
+    display: flex;
+    background-color: #EBEBEB;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 7%;
+}
+
+.leftSide{
+    display: flex;
+    gap: 4%;
+}
+
+.logo{
+    font-size: 20px;
+}
+.container{
+    /* width: 80%; */
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    padding: 10px 17%;
+}
+
+.container h4{
+    margin-top: 5%;
+}
+
+.top-container{
+    padding: 10px 7%;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.main{
+    display: flex;
+    gap: 7%;
+    margin-top: 2%;
+}
+
+.details{
+    display: flex;
+    gap: 1.5%;
+}
+
+.profileDetails{
+    margin-top: -5px;
+    font-size: 13px;
+}
+
+.profileDetails .name{
+    font-weight: bold;
+}
+
+.menu ul li{
+    margin-top: 25%;
+    font-size: 14px;
+    cursor: pointer;
+    color: #474545;
+    transition: 1s;
+}
+
+.menu ul li:hover{
+    color: #000000;
+}
+
+.form{
+    margin-top: 6%;
+}
+
+
+
+/* .profileImage{
+border: 1px solid black;
+border-radius: 50%;
+height: 2.2rem;
+width: 22px;
+} */
+ .profileImage img{
+    background-image: contain;
+    object-fit: cover;
+    height: 2.2rem;
+ }
+
+.rightSideBar h5{
+    font-size: 15px;
+}
+
+.input-tab {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.input-tab input {
+    padding: 10px 20px;
+    border-radius: 3px;
+    border: none;
+    background-color: #EBEBEB;
+    outline: none;
+    font-size: 13px;
+    width: 150%;
+}
+
+.input-tab label {
+    font-size: 12px;
+    /* font-weight: bold; */
+    color:black; 
+    margin-bottom: 3px;
+}
+.input-tab p {
+    color: red;
+    font-style: italic;
+    margin-left: 1vh;
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+.clickHereA,
+.clickHere{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.changeAccountDetails{
+    font-size: 13px;
+}
+
+.updateBtn{
+    padding: 8px 20px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    margin-top: 19px;
+    cursor: pointer;
+}
+
+
+
+.textArea3{
+    margin-top: -9vh;
+    width: 103vh;
+    margin-left: 4rem;
+    padding: 2rem;
+    border-radius: 5px;
+    height: 550px;
+    /* overflow: auto; */
+    background-color: white;
+}
+
+
+table{
+    width: 100%;
+    table-layout: fixed;
+    min-width: 950px;
+    border-collapse: collapse;
+    overflow: hidden;
+    /* height: 650px; */
+}
+
+thead{
+    background-color: #EBEBEB;
+    border-radius: 45px;
+    position: sticky;
+   
+}
+
+thead th{
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+}
+tbody{
+    max-height: 350px;
+    display: block;
+    overflow: auto;
+}
+
+th, td{
+    padding: 12px 18px;
+    word-break: break-all;
+    text-align: center;
+    font-size: 17px;
+    margin: auto;
+}
+tr{
+    border-bottom: 2px solid #dddddd;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    width: 100%;
+}
+
+
+
+
+
+/* Added */
+
+.dashboardIcon{
+    height: 15px;
+    margin-bottom: -2px;
+    margin-right: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.personalInformation{
+    display: none;
+}
+
+.passwordSection{
+    display: none;
+}
+
+
+.createAdminSection{
+    display: none;
+}
+
+.manageUsers{
+    display: none;
+}
+
+.manageUsersSection{
+    display: none;
+}
+
+
+
+
+.dashboardIcon{
+    height: 15px;
+    margin-bottom: -2px;
+    margin-right: 2px;
+    cursor: pointer;
+}
+
+.profileDetails{
+    margin-top: 0px;
+    margin-left: 5px;
+    font-size: 13px;
+}
+
+
+.profileImage img{
+    background-image: contain;
+    object-fit: cover;
+    height: 2.2rem;
+    border-radius: 50%;
+    padding-bottom: 0px;
+ }
+
+ .profileImage{
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 3px;
+    padding-bottom: 0px;
+    }
+
+
+    .profileDetails{
+        margin-top: -6.5px;
+        font-size: 13px;
+    }
+
+    
+.footer {
+  position: relative;
+  width: 100%;
+  background: black;
+  min-height: 140px;
+  min-height: 230px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+    
+    </style>
+    
+    <div class="top-bar">
+        <div class="leftSide">
+            <p>Dashboard</p>
+            <p id="emailAddress">email@gmail.com</p>
+        </div>
+        <div class="rightSide">
+            <p id="logout1">Logout</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="top-container">
+            <p class="logo" id="logoName">Potter Pallete</p>
+            <div class="cart" style="visibility: hidden;">Cart</div>
+        </div>
+        <h4>My Profile</h4>
+        <div class="main">
+            <div class="leftSidebar">
+                <div class="details">
+                    <div class="profileImage"><img src="https://res.cloudinary.com/kene281/image/upload/v1705593069/Potter%20Pallete/Icons/user-circle_ktswk3.svg" alt="profile Image"></div>
+                    <div class="profileDetails">
+                        <p class="name" id="full_name">Userame</p>
+                        <p class="email"  id="email">email@gmail.com</p>
+                        <p id="role">Role</p>
+                    </div>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li id="personalInformation"> <img src="https://res.cloudinary.com/kene281/image/upload/v1705549072/Potter%20Pallete/Icons/user-svgrepo-com_vzgxwa.svg" class="dashboardIcon" alt="">Personal Information</li>
+                        <li id="createAdmin"> <img src="https://res.cloudinary.com/kene281/image/upload/v1705549052/Potter%20Pallete/Icons/add-user-svgrepo-com_ll8rtg.svg" class="dashboardIcon" alt="">Create Admin</li>
+                        <li id="manageUsers"><img src="https://res.cloudinary.com/kene281/image/upload/v1705549071/Potter%20Pallete/Icons/users-2-svgrepo-com_oat36f.svg" class="dashboardIcon" alt="">Manage Users</li>
+                        <li id="Logout"> <img src="https://res.cloudinary.com/kene281/image/upload/v1705549058/Potter%20Pallete/Icons/log-out-svgrepo-com_sphihe.svg" class="dashboardIcon" alt="">Logout</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rightSideBar">
+                <div class="personalInformation">
+                    <h5>Personal Information</h5>
+                    <form id="form1">
+                        <div class="input-tab">
+                            <label for="Email">Email:</label>
+                            <input id="Email" type="text" placeholder="Enter your Email">
+                            <p id="emailErrorMessage"></p>
+                        </div>
+                        <div class="input-tab">
+                            <label for="Username">Username</label>
+                            <input id="Username" type="text" placeholder="Enter your Username">
+                            <p id="usernameErrorMessage"></p> 
+                        </div>
+                        <p class="changeAccountDetails">Change your account details below or <span class="clickHere">click here</span> to change your password</p>
+                        <div class="btn">
+                            <button id="UpdateProfileBtn" class="updateBtn" type="submit" >Update Account</button>                 
+                        </div>
+                    </form>
+                </div>
+                    <div class="passwordSection">
+                        <h5>Change your password</h5>
+                        <form id="form2">
+                            <div class="input-tab">
+                                <label for="password1">Password</label>
+                                <input id="password1" type="password" placeholder="Enter your Password" autocomplete="on">
+                                <p id="passwordErrorMessage1"></p> 
+                            </div>
+                            <div class="input-tab">
+                                <label for="password2">New Password</label>
+                                <input id="password2" type="password" placeholder="Enter your Password" autocomplete="on">
+                                <p id="passwordErrorMessage2"></p>
+                            </div>
+                            <div class="input-tab">
+                                <label for="password3"> Confirm Password</label>
+                                <input id="password3" type="password" placeholder="Enter your Password"   >
+                                <p id="passwordErrorMessage3"></p>
+                            </div>
+                            <p class="changeAccountDetails">Change your password below or <span class="clickHereA">click here</span> to change your account details</p>
+                            <div class="btn">
+                                <button id="UpdatePasswordBtn" class="updateBtn" type="submit" >Update Password</button>                 
+                            </div>
+                        </form>
+                    </div>
+
+
+                <div class="createAdminSection">
+                    <h5>Create Admin User</h5>
+                    <form id="form3" class="form">
+                        <div class="input-tab">
+                            <label for="username">Username:</label>
+                            <input id="adminusername" type="text" placeholder="Enter Username">
+                            <p id="createUsernameErrorMessage"></p>
+                        </div>
+                        <div class="input-tab">
+                            <label for="email">Email:</label>
+                            <input id="adminemail" type="text" placeholder="Enter your Email">
+                            <p id="createEmailErrorMessage"></p>
+                        </div>
+                        <div class="input-tab">
+                            <label for="password">Password:</label>
+                            <input id="adminpassword" type="password" placeholder="Enter your Password" autocomplete="on">
+                            <p id="createPasswordErrorMessage"></p>
+                        </div>
+                        <div class="input-tab">
+                            <label for="password"> Confirm Password:</label>
+                            <input id="adminpassword2" type="password" placeholder="Confirm your Password" autocomplete="on">
+                            <p id="createPasswordErrorMessage2"></p>
+                        </div>
+                        <div class="btn2">
+                            <button id="submitBtn2" class="updateBtn" type="submit" >Create</button>                 
+                        </div>
+                    </form>
+                </div>
+
+                <div class="manageUsersSection">
+                    <div class="textArea3">
+                        <table id="myTable">
+                            <thead>
+                                <tr>
+                                    <th>Serial Number</th>
+                                    <th>Username</th>
+                                    <th>Email</th>
+                                    <th>Account Type</th>
+                                </tr>
+                            </thead>
+                            <tbody id="Tablebody">
+                            </tbody>
+                        </table>
+                                        
+                    </div>
+                </div>
+
+                
+
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="footer">
+        <ul class="social-icon">
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a></li>
+        </ul>
+        <ul class="menu">
+          <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+    
+        </ul>
+        <p>&copy;2021 Nadine Coelho | All Rights Reserved</p>
+      </footer>
+
+
+
+
+
+
+
+
+
+
+    <!-- <footer>
+        <div class="columns">
+            <div class="firstColumn">
+                <h5>Potter Pallete</h5>
+                <p>Ceramic paint palettes, whether shaped uniquely or hand-built,
+                     reflect the artist's touch and hold personal significance.</p>
+            </div>
+            <div class="secondColumn">
+                <h5>Contact Info</h5>
+                <p>No 8, Kenya Street Barnawa</p>
+                <p> potterpallete46@gmail.com</p>
+                <p>+234-8153232107</p>
+            </div>
+            <div class="thirdColumn">
+                <ul>
+                    <li><i class="fab fa-facebook-f"></i></li>
+                    <li><i class="fab fa-linkedin-in"></i></li>
+                    <li><i class="fab fa-twitter"></i></li>
+                    <li><i class="fab fa-instagram"></i></li>
+                </ul>
+            </div>
+        </div>
+    </footer> -->
+    <script src="../JS/trial_dashboardAdmin.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<html>
+
+<body>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  background: #333;
+  justify-content: flex-end;
+  align-items: flex-end;
+  min-height: 100vh;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  background: black;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+    </style>
+  <footer class="footer">
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+    </ul>
+    <ul class="menu">
+      <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+
+    </ul>
+    <p>&copy;2021 Nadine Coelho | All Rights Reserved</p>
+  </footer>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html> -->

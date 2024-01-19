@@ -619,13 +619,15 @@ getuserCartItem()
 			Checkout.addEventListener('click',()=>{
 				movePurchasedItems()
 				deleteAllItem()
-				getuserPurchasedItem()
                 const CartHolder = document.getElementById('cart-content');
                 const Total = document.getElementById('price')
                 Total.innerHTML = ''
                 CartHolder.innerHTML = '';
                 cart.classList.remove("active");
-                window.location.href="../HTMLS/paymentStack.html"
+				setTimeout(() => {
+					getuserPurchasedItem()
+					window.location.href="../HTMLS/paymentStack.html"
+				}, 2000);
 	
 			})
 							
