@@ -697,7 +697,9 @@ header .search-form label:hover{
 }
 
 
-
+.closingX{
+    margin-left: 83vh;
+}
 
 
 
@@ -755,6 +757,10 @@ header .search-form label:hover{
         line-height: 3vh;
         font-size: 17px;
     }
+    .closingX{
+        margin-left: 69vh;
+    }
+
 }
 @media (max-width: 500px){
 
@@ -792,6 +798,9 @@ header .search-form label:hover{
         }
         .detailsImage{
             height: 100%;
+        }
+        .closingX{
+            margin-left: 39vh;
         }
 
 }

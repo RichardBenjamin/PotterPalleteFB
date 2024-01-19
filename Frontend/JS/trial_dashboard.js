@@ -271,7 +271,7 @@ function showProfile(){
 			result = bodydata.data;
 			localStorage.setItem("username", result.name);
 			localStorage.setItem("email", result.email);
-			window.location.href = "../HTMLS/trial_dashboard.html" 
+			window.location.href = "../HTMLS/trial_dashboardBuyer.html" 
 
 		} catch (err) {
 			console.error(`Error: ${err}`);

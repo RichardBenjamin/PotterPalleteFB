@@ -204,7 +204,7 @@ closeCart.addEventListener("click", () => {
                                                             <span>Suitable for: <p>${productItem.suitablefor}</p></span>
                                                         </div>
                                                     </div>
-                                                    <i class='bx bx-x' style="color: red; font-size: 3vh; display: inline; position: absolute; z-index: 5; align-items: end; justify-self: flex-end; margin-left: 83vh; margin-top: -1vh; cursor: pointer;" id="closeBtn"></i>`
+                                                    <i class='bx bx-x closingX' style="color: red; font-size: 3vh; display: inline; position: absolute; z-index: 5; align-items: end; justify-self: flex-end; margin-top: -1vh; cursor: pointer;" id="closeBtn"></i>`
                                         
                                         
                                                     modal.appendChild(details)
