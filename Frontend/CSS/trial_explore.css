@@ -821,6 +821,22 @@ header .search-form label:hover{
         height: 70vh;
         top: 15%;
     }
+    .closingX{
+        margin-left: 85%;
+    }
+    
+@media (max-width: 450px){
+    .details{
+        left: 5%;
+        width: 40vh;
+        flex-direction: column;
+        height: 70vh;
+        top: 15%;
+    }
+    .closeX{
+        margin-left: 20vh;
+    }
+}
 }
 
 @media (max-width: 400px){

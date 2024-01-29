@@ -733,7 +733,6 @@ getuserCartItem()
 			const itemPrice = document.getElementById('itemPrice')
 			const localName = localStorage.getItem("username")
 		
-			// const uploadedImage = document.getElementById('uploadedImage')
 			
 			
 		
@@ -785,13 +784,11 @@ getuserCartItem()
 				})
 				const result = await res.json()
 				console.log(result);
-				// uploadedImage.src = result.images
 				return (result);
 		
 			} catch (err) {
 				console.error(`Error: ${err}`);
 			}
-			// getUploadedItems()
 		}
 		
 
