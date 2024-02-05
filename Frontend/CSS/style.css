@@ -1521,3 +1521,98 @@ header {
 .sliderParagraph{
     line-height: 50px;
 }
+
+
+
+
+/*----------------------------------------------- Partners ----------------------------------------------  */
+
+.fifthSection{
+    /* margin-top: 62vh; */
+    text-align: center;
+}
+
+.fifthSection h6{
+    margin-top: 2vh;
+    font-size: 24px;
+    margin-bottom: 1vh;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: underline;
+}
+
+
+
+/* .fifthSection hr{
+    width: 15%;
+    align-content: center;
+    justify-content: center;
+    margin-left: 84vh;
+} */
+
+
+
+
+
+
+
+@keyframes slide {
+    from{
+        transform: translateX(0);
+    }    
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+
+.partners-logos{
+    overflow: hidden;
+    padding: 60px 0;
+    background-color: white;
+    white-space: nowrap;  
+    position: relative;
+    height: 20vh;
+}
+
+.partners-logos:before,
+.partners-logos:after{
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: " ";
+    z-index: 2; 
+}
+.partners-logos:before{
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+.parthners-logos:after{
+    right: 50;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.partners-logos-slide{
+    /* white-space: nowrap;    */
+    animation: 20s slide infinite linear ;
+    display: inline-block;
+}
+
+.partners-logos:hover .partners-logos-slide{
+    animation-play-state: paused; 
+}
+
+.partners-logos-slide img{
+    height: 120px;
+    margin: 0 15px;
+}
+
+@media (max-width:1000px){
+
+    .partners-logos{
+margin-bottom: 5%;
+    }
+}
+
+
+

@@ -125,8 +125,8 @@ function explore(){
     
 
 
-// let copy = document.querySelector(".partners-logos-slide").cloneNode(true)
-// document.querySelector(".partners-logos").appendChild(copy)
+let copy = document.querySelector(".partners-logos-slide").cloneNode(true)
+document.querySelector(".partners-logos").appendChild(copy)
 
 
 
