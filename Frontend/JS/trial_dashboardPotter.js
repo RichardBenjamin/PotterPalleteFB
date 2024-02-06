@@ -122,6 +122,8 @@ personalInformation.addEventListener('click', ()=>{
 		Logout()
 	})
 
+	
+
 
 					// ---------------------------- FUNCTION TO UPDATE PASSWORD FORM --------------------------------//
 	
@@ -182,6 +184,7 @@ function showProfile(){
 	uploadSection.style.display = 'none';
 	orderSection.style.display = 'none';
     personalInformationSection.style.display = 'block';
+	leftSidebar.classList.remove('active')
 	}
 	
 	function showPassword(){
@@ -191,6 +194,7 @@ function showProfile(){
 		orderSection.style.display = 'none';
 		uploadSection.style.display = 'none'
         passwordSection.style.display = 'block';
+		leftSidebar.classList.remove('active')
 	}
 	
 	function showPurchases(){
@@ -200,6 +204,7 @@ function showProfile(){
         MyUploadsSection.style.display = 'none';
 		uploadSection.style.display = 'none'
         purchasedSection.style.display = 'block';
+		leftSidebar.classList.remove('active')
 	}
 	function showMyuploads(){
         personalInformationSection.style.display = 'none';
@@ -208,6 +213,7 @@ function showProfile(){
         purchasedSection.style.display = 'none';
 		uploadSection.style.display = 'none'
         MyUploadsSection.style.display = 'block';
+		leftSidebar.classList.remove('active')
 	}
 
 	function showuploadSection(){
@@ -217,6 +223,7 @@ function showProfile(){
         purchasedSection.style.display = 'none';
         MyUploadsSection.style.display = 'none';
 		uploadSection.style.display = 'flex'
+		leftSidebar.classList.remove('active')
 	}
 
 	function showorderSection(){
@@ -226,6 +233,7 @@ function showProfile(){
         MyUploadsSection.style.display = 'none';
 		uploadSection.style.display = 'none'
 		orderSection.style.display = 'block';
+		leftSidebar.classList.remove('active')
 	}
 
 	function Logout(){
@@ -329,7 +337,11 @@ function showProfile(){
 
 
 		
-		
+const leftSidebar = document.querySelector('.leftSidebar')
+document.querySelector('#MenuBtn').onclick = () =>{
+    console.log("huuh");
+    leftSidebar.classList.toggle('active')
+}
 		
 
 		

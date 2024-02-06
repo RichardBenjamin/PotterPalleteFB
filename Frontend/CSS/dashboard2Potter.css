@@ -16,7 +16,7 @@
 
 body{
     background-color: white;
-    overflow: hidden;
+    /* overflow: hidden; */
     position: relative;
 }
 
@@ -524,7 +524,7 @@ footer {
     background-color: #000000;
     width: 100%;
     color: white;
-    height: 21.5vh;
+    /* height: 21.5vh; */
 }
 .columns{
     width: 90%;
@@ -617,7 +617,6 @@ footer {
 
 .top-bar p{
     text-align: center; 
-    margin-left: 45%;
 }
 
 
@@ -625,11 +624,33 @@ footer {
     text-align: center; 
 }
 
+@media (max-width: 1600px){
+    .uploadSection{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+
 
 @media (max-width: 1500px){
     .collection{
         grid-template-columns: auto auto auto;
     }    
+}
+@media (max-width: 1320px){
+    .uploadSection{
+        flex-direction: column;
+    }
+    .uploadSection{
+        margin-top: -7vh;
+        display: flex;
+        gap: 10vh;
+    }
+    
+     
 }
 
 
@@ -641,6 +662,17 @@ footer {
     .container{
         padding-left: 10%;
     }
+    .uploadSection{
+
+    margin-top: -7vh;
+    margin-top: 5vh;
+    display: flex;
+    gap: 10vh;
+}
+#UploadBtn{
+    margin-bottom: 2vh;
+ }
+
 }
 
 
@@ -671,10 +703,10 @@ footer {
         width: 30vh;
         margin-left: 4vh;
     }
-footer{
-    z-index: 5000;
-    position: absolute;
-}
+/* footer{ */
+    /* z-index: 5000; */
+    /* position: relative; */
+/* } */
 .collection{
     height: 60vh;
 }
@@ -742,6 +774,11 @@ footer{
         gap: 2vh;
     } 
  }
+ @media (max-width: 565px){
+    .description textarea{
+        width: 40vh;
+    } 
+}
 
 @media (max-width: 525px){
     .frame{
@@ -784,6 +821,13 @@ footer{
     }
 
  }
+ @media (max-width: 465px){
+    .description textarea{
+        width: 30vh;
+        height: 30vh;
+    } 
+}
+
 @media (max-width: 390px){
     .frame{
         width: 30vh;
@@ -870,8 +914,9 @@ footer{
 
    
 .footer {
-    position: relative;
+    position: absolute;
     width: 100%;
+    bottom: 0%;
     background: black;
     min-height: 140px;
     min-height: 230px;
@@ -880,6 +925,7 @@ footer{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    display: none;
   }
   
   .social-icon,
@@ -939,3 +985,4 @@ footer{
         font-size: 1rem;
     }
  }
+
