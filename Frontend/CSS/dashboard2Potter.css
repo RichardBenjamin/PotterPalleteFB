@@ -986,3 +986,6 @@ footer {
     }
  }
 
+ .uploadSection{
+    display: none;
+}
