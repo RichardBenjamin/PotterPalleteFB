@@ -37,7 +37,7 @@ Welcome to the **Potter's Palette** project! This repository contains the code a
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/potters-palette.git
+   https://github.com/RichardBenjamin/PotterPalleteFB.git
    ```
 
 2. **Navigate into the project directory:**
